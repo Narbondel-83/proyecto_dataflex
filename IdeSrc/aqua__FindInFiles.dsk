@@ -5,10 +5,10 @@ SubDirectories=1
 WholeWordOnly=0
 RegularExpression=0
 SearchWhere=0
-Location=C:\DataFlex Projects\FutbolWebApp\IdeSrc\aqua__FindInFiles.dsk
-[C:\DataFlex Projects\FutbolWebApp\AppSrc]
+Location=C:\Users\aqua_\Documents\proyecto_dataflex\IdeSrc\aqua__FindInFiles.dsk
+[C:\Users\aqua_\Documents\proyecto_dataflex\AppSrc]
 IsEnabled=1
-[C:\DataFlex Projects\FutbolWebApp\DDSrc]
+[C:\Users\aqua_\Documents\proyecto_dataflex\DDSrc]
 IsEnabled=1
-[C:\DataFlex Projects\FutbolWebApp\AppHtml]
+[C:\Users\aqua_\Documents\proyecto_dataflex\AppHtml]
 IsEnabled=1
