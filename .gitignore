@@ -1,0 +1,23 @@
+# Ejecutables y logs
+*.exe
+*.log
+Programs/*.exe
+Programs/*.log
+
+# Archivos de sesión / temporales
+Data/WebAppSession.*
+Data/webappsession.*
+
+# Archivos de IDE DataFlex
+IdeSrc/*.dsk
+IdeSrc/*.mtd
+
+# Configuración local / dependencias compiladas
+AppSrc/*.dep
+AppSrc/*.prn
+AppSrc/*.manifest
+
+# Otros temporales comunes
+*.tmp
+*.cache
+*.bak
