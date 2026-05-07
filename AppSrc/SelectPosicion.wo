@@ -1,5 +1,5 @@
-﻿// C:\Users\aqua_\Documents\proyecto_dataflex\AppSrc\SelectLiga.wo
-// Liga
+﻿// C:\Users\aqua_\Documents\proyecto_dataflex\AppSrc\SelectPosicion.wo
+// Posicion
 //
 
 Use cWebView.pkg
@@ -8,34 +8,28 @@ Use cWebMenuGroup.pkg
 Use cWebMenuItem.pkg
 Use cWebColumnButton.pkg
 Use cWebColumn.pkg
-Use ZoomLiga.wo
+Use ZoomPosicion.wo
 
-Use cligaDataDictionary.dd
+Use cposicionDataDictionary.dd
 Use cWebLabel.pkg
 
-Object oSelectLiga is a cWebView
-    Set psCaption to "Liga"
+Object oSelectPosicion is a cWebView
+    Set psCaption to "Posicion"
     Set peWebViewStyle to wvsDrilldown
     Set peViewType to vtSelect
     Set piColumnCount to 12
     Set pbShowCaption to False
     Set piMaxWidth to 1024
 
-    Object oliga_DD is a cligaDataDictionary
+    Object oposicion_DD is a cposicionDataDictionary
     End_Object 
 
-    Set Main_DD To oliga_DD
-    Set Server  To oliga_DD
+    Set Main_DD To oposicion_DD
+    Set Server  To oposicion_DD
 
-    Object oEtiquetaCompeticion is a cWebLabel
-        Set psCaption to "Competición"
-        Set piColumnSpan to 7
-        Set psCSSClass to "LabelCaption"
-    End_Object
-
-    Object oEtiquetaPais is a cWebLabel
-        Set psCaption to "País"
-        Set piColumnIndex to 7
+    Object oEtiquetaPosicion is a cWebLabel
+        Set psCaption to "Posición jugador"
+        Set piColumnSpan to 5
         Set psCSSClass to "LabelCaption"
     End_Object
 
@@ -48,30 +42,23 @@ Object oSelectLiga is a cWebView
         Set pbShowHeader to False
         Set piSortColumn to 0
 
-        Object oligaNombre is a cWebColumn
-            Entry_Item liga.Nombre
-            Set psCaption to "liga.Nombre"
-            Set piWidth to 621
-            Set psCSSClass to "RowCaption"
-        End_Object 
-
-        Object oligaPais is a cWebColumn
-            Entry_Item liga.Pais
-            Set psCaption to "liga.Pais"
-            Set piWidth to 355
+        Object oposicionNombre is a cWebColumn
+            Entry_Item posicion.Nombre
+            Set psCaption to "posicion.Nombre"
+            Set piWidth to 500
             Set psCSSClass to "RowCaption"
         End_Object 
 
         Object oDetailButton is a cWebColumnButton
             Set psCaption to "btn"
-            Set piWidth to 66
+            Set piWidth to 45
             Set pbFixedWidth to True
             Set pbResizable to False
-            Set piListRowSpan to 2
+            Set piListRowSpan to 1
             Set psBtnCssClass to "WebButtonIcon WebIcon_Info"
             Set peAlign to alignRight
 
-            WebRegisterPath ntNavigateForward oZoomLiga
+            WebRegisterPath ntNavigateForward oZoomPosicion
 
             Procedure OnClick
                 Send NavigatePath
@@ -81,15 +68,6 @@ Object oSelectLiga is a cWebView
                 Move True to NavigateData.bReadOnly
             End_Procedure
 
-        End_Object 
-
-        Object oligaEquipos is a cWebColumn
-            Entry_Item liga.Equipos
-            Set psCaption to "liga.Equipos"
-            Set piWidth to 100
-            Set pbNewLine to True
-            Set psCSSClass to "RowDetail"
-            Set peAlign to alignLeft
         End_Object 
 
 // ToDo: Fill in the from-parent child Select view object name for navigate forward
@@ -144,7 +122,7 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
             Set psCSSClass to "WebClearMenuItem"
             Set psCaption to "New"
 
-            WebRegisterPath ntNavigateForward oZoomLiga
+            WebRegisterPath ntNavigateForward oZoomPosicion
 
             Procedure OnClick
                 Send NavigatePath
