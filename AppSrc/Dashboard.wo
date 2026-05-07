@@ -1,4 +1,4 @@
-Use cWebView.pkg
+﻿Use cWebView.pkg
 Use cWebPanel.pkg
 Use cWebForm.pkg
 Use cWebButton.pkg
@@ -27,7 +27,7 @@ Object oDashboard is a cWebView
     // constraints in the next view that we navigate to.
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-    Set piMaxWidth to 1024
+    Set piMaxWidth to 20
     
     Set psCaption to "Dashboard"
     Set peViewType to vtUndefined

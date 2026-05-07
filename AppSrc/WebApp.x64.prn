@@ -1,5 +1,5 @@
 Compiling Program: C:\Users\aqua_\Documents\proyecto_dataflex\AppSrc\WebApp.src
-Memory Available: 39102615552
+Memory Available: 41315180544
 1>Use AllWebAppClasses.pkg
 Using pre-compiled package ALLWEBAPPCLASSES.PKG
 Including file: AllWebAppClasses.x64.pkd    (C:\Program Files\DataFlex 25.0\Pkg\AllWebAppClasses.x64.pkd)
@@ -1430,7 +1430,7 @@ Including file: Dashboard.wo    (C:\Users\aqua_\Documents\proyecto_dataflex\AppS
 37302>>>    // constraints in the next view that we navigate to.
 37302>>>    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 37302>>>
-37302>>>    Set piMaxWidth to 1024
+37302>>>    Set piMaxWidth to 20
 37303>>>    
 37303>>>    Set psCaption to "Dashboard"
 37304>>>    Set peViewType to vtUndefined
@@ -2305,7 +2305,7 @@ Including file: SelectEquipo.wo    (C:\Users\aqua_\Documents\proyecto_dataflex\A
 38029>Send StartWebApp of oWebApp
 38030>
 Summary
-Memory Available: 39096238080
+Memory Available: 41306882048
 Total Warnings : 0
 Total Errors   : 0
 Total Symbols  : 25347
