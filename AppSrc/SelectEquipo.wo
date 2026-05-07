@@ -51,6 +51,7 @@ Object oSelectEquipo is a cWebView
             Entry_Item equipo.Nombre
             Set psCaption to "equipo.Nombre"
             Set piWidth to 1201
+            Set psCSSClass to "RowCaption"
         End_Object 
 
         Object oDetailButton is a cWebColumnButton
