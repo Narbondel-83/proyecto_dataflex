@@ -9,8 +9,11 @@ Use cWebMenuItem.pkg
 Use cWebForm.pkg
 Use cWebTabContainer.pkg
 Use cWebTabPage.pkg
+Use cWebButton.pkg //boton
 
 Use cligaDataDictionary.dd
+
+Use SelectEquipo.wo //llamo a los equipos 
 
 Object oZoomLiga is a cWebView
     Set piColumnCount to 12
@@ -66,6 +69,19 @@ Object oZoomLiga is a cWebView
                     Set psLabel to "Equipos actuales"
                     Set peAlign to alignLeft
                 End_Object 
+                
+                Object oVerEquiposBtn is a cWebButton //btn nuevo
+                    Set psCaption to "Ver equipos en esta liga"
+                    Set piColumnSpan to 3
+                    Set piColumnIndex to 0
+                    
+                    WebRegisterPath ntNavigateForward oSelectEquipo
+                    
+                    Procedure OnClick 
+                        Send NavigatePath
+                    End_Procedure
+                    
+                End_Object
             End_Object 
         End_Object 
     End_Object 

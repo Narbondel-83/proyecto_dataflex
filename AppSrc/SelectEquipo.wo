@@ -32,12 +32,6 @@ Object oSelectEquipo is a cWebView
     Set Main_DD To oequipo_DD
     Set Server  To oequipo_DD
 
-    Object oListaEquipos is a cWebLabel
-        Set psCaption to "Todos los equipos"
-        Set piColumnSpan to 4
-        Set psCSSClass to "LabelCaption"
-    End_Object
-
 
     Object oList is a cWebList
         Set piColumnSpan to 0
