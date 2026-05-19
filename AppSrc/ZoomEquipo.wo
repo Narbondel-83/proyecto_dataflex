@@ -56,7 +56,6 @@ Object oZoomEquipo is a cWebView
                 Set psCaption to "Liga a la que pertenece"
                 WebSetResponsive piColumnCount rmMobile to 4
                 
-                //navegación from child 
                 Object oligaNombre is a cWebForm
                     Entry_Item liga.Nombre
                     Set piColumnSpan to 7
@@ -67,7 +66,7 @@ Object oZoomEquipo is a cWebView
 
                     WebRegisterPath ntNavigateForward oSelectLiga
 
-                    Procedure OnPrompt //al pulsar la lupa se abra el Select de ligas
+                    Procedure OnPrompt //al pulsar la lupa se va a SelectLiga
                         Send NavigatePath
                     End_Procedure
                 End_Object 

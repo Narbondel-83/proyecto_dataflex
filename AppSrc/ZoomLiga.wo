@@ -9,11 +9,13 @@ Use cWebMenuItem.pkg
 Use cWebForm.pkg
 Use cWebTabContainer.pkg
 Use cWebTabPage.pkg
-Use cWebButton.pkg //boton
+Use cWebButton.pkg //btn
+Use cWebList.pkg //lista
 
 Use cligaDataDictionary.dd
+Use cequipoDataDictionary.dd //el DD de equipo
 
-Use SelectEquipo.wo //llamo a los equipos 
+Use SelectEquipo.wo //llamo a la vista 
 
 Object oZoomLiga is a cWebView
     Set piColumnCount to 12
@@ -26,6 +28,11 @@ Object oZoomLiga is a cWebView
 
     Object oliga_DD is a cligaDataDictionary
     End_Object 
+    
+    Object oequipo_DD is a cequipoDataDictionary //declaro DD hijo para poder desplegar cosas
+        Set DDO_Server to oliga_DD //el padre del DD
+        Set Constrain_File to liga.File_Number 
+    End_Object
 
     Set Main_DD To oliga_DD
     Set Server  To oliga_DD
@@ -63,15 +70,38 @@ Object oZoomLiga is a cWebView
 
                 Object oligaEquipos is a cWebForm
                     Entry_Item liga.Equipos
-                    Set piColumnSpan to 3
+                    Set piColumnSpan to 6
                     Set piColumnIndex to 0
                     Set peLabelPosition to lpTop
                     Set psLabel to "Equipos actuales"
                     Set peAlign to alignLeft
                 End_Object 
+
+                Object oliga_EquiposMax is a cWebForm
+                    Entry_Item liga.EquiposMax
+                    Set Server to oliga_DD
+                    Set piColumnSpan to 6
+                    Set psLabel to "Máximo de equipos permitidos"
+                    Set peLabelPosition to lpTop
+                    Set piColumnIndex to 6
+                    Set peAlign to alignLeft
+                End_Object
                 
-                Object oVerEquiposBtn is a cWebButton //btn nuevo
-                    Set psCaption to "Ver equipos en esta liga"
+                                
+                Object oEquiposLista is a cWebList //lista - equipos
+                    Set Server to oequipo_DD
+                    Set piColumnSpan to 6
+                    Set piColumnIndex to 0
+                                   
+                    Object oequipoNombre is a cWebColumn
+                        Entry_Item equipo.Nombre
+                        Set psCSSClass to "LabelCaption"
+                        Set psCaption to "Listado de equipos"
+                    End_Object 
+                End_Object
+                
+                Object oVerEquiposBtn is a cWebButton //btn nuevo - equipos
+                    Set psCaption to "Ver equipos en detalle"
                     Set piColumnSpan to 3
                     Set piColumnIndex to 0
                     
