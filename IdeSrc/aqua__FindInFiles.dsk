@@ -1,10 +1,10 @@
 [Header]
 Mask=*.src;*.vw;*.sl;*.dg;*.rv;*.bp;*.pkg;*.wo;*.dd;*.inc;*.tpl;*.dfo;*.asp;*.asa;*.html;*.css;*.js
-Active=0
+Active=1
 SubDirectories=1
 WholeWordOnly=0
 RegularExpression=0
-SearchWhere=0
+SearchWhere=1
 Location=C:\Users\aqua_\Documents\proyecto_dataflex\IdeSrc\aqua__FindInFiles.dsk
 [C:\Users\aqua_\Documents\proyecto_dataflex\AppSrc]
 IsEnabled=1
