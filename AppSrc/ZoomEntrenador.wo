@@ -104,7 +104,7 @@ Object oZoomEntrenador is a cWebView
                     Procedure OnClick 
                         Forward Send OnClick
                         //para limpiar el campo equipoNombre
-                        Send Request_ClearBindingTable of oequipoNombre
+                        Send Clear of oequipo_DD
                     End_Procedure
                 End_Object
             End_Object 

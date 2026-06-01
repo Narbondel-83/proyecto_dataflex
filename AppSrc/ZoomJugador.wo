@@ -120,6 +120,15 @@ Object oZoomJugador is a cWebView
                     End_Procedure
                     
                 End_Object
+
+                Object oDespedirBoton is a cWebButton //btn - quitar equipo
+                    Set piColumnSpan to 4
+                    Set psCaption to "Despedir"
+                
+                    Procedure OnClick
+                        Send Clear of oequipo_DD
+                    End_Procedure
+                End_Object
             End_Object 
         End_Object 
     End_Object 
