@@ -1,5 +1,5 @@
 Compiling Program: C:\Users\aqua_\Documents\proyecto_dataflex\AppSrc\WebApp.src
-Memory Available: 38392315904
+Memory Available: 41338257408
 1>Use AllWebAppClasses.pkg
 Using pre-compiled package ALLWEBAPPCLASSES.PKG
 Including file: AllWebAppClasses.x64.pkd    (C:\Program Files\DataFlex 25.0\Pkg\AllWebAppClasses.x64.pkd)
@@ -2224,9 +2224,9 @@ Including file: SelectLiga.wo    (C:\Users\aqua_\Documents\proyecto_dataflex\App
 38004>>>    Object oliga_DD is a cligaDataDictionary
 38006>>>    End_Object 
 38007>>>    
-38007>>>    Object oequipo_DD is a cequipoDataDictionary //declaro para poder desplegar cosas
+38007>>>    Object oequipo_DD is a cequipoDataDictionary //declaro DD hijo para poder desplegar cosas
 38009>>>        Set DDO_Server to oliga_DD //el padre del DD
-38010>>>        Set Constrain_File to liga.File_Number
+38010>>>        Set Constrain_File to liga.File_Number 
 38011>>>    End_Object
 38012>>>
 38012>>>    Set Main_DD To oliga_DD
@@ -3649,7 +3649,7 @@ Including file: SelectJugador.wo    (C:\Users\aqua_\Documents\proyecto_dataflex\
 39220>Send StartWebApp of oWebApp
 39221>
 Summary
-Memory Available: 38375858176
+Memory Available: 41315950592
 Total Warnings : 0
 Total Errors   : 0
 Total Symbols  : 25649
