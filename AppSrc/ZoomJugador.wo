@@ -10,6 +10,7 @@ Use cWebForm.pkg
 Use cWebTabContainer.pkg
 Use cWebTabPage.pkg
 Use cWebButton.pkg //btn
+Use cWebCombo.pkg //combobox
 
 Use cligaDataDictionary.dd
 Use cequipoDataDictionary.dd
@@ -60,7 +61,7 @@ Object oZoomJugador is a cWebView
             Set psLabel to "Apellido"
         End_Object 
 
-        Object ojugadorNacionalidad is a cWebForm
+        Object ojugadorNacionalidad is a cWebCombo //combobox 
             Entry_Item jugador.Nacionalidad
             Set piColumnSpan to 6
             Set piColumnIndex to 0

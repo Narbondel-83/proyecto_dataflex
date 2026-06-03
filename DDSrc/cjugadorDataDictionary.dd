@@ -5,6 +5,11 @@ Open hijojugador
 Open jugadorposicion
 Open equipo
 
+Object oNacionalidadValidacion is a CodeValidationTable //tablas de validacion activas
+    Set Type_Value to "NACIONALIDAD"
+    
+End_Object
+
 Class cjugadorDataDictionary is a DataDictionary
     
     Procedure Construct_Object
@@ -22,6 +27,9 @@ Class cjugadorDataDictionary is a DataDictionary
         Set Foreign_Field_Option DD_KEYFIELD DD_FINDREQ to True
         Set Foreign_Field_Option DD_INDEXFIELD DD_NOPUT to True
         Set Foreign_Field_Option DD_DEFAULT DD_DISPLAYONLY to True
+        
+        //a que campo va asociada la validacion
+        Set Field_Value_Table Field jugador.Nacionalidad to oNacionalidadValidacion
 
     End_Procedure
     
