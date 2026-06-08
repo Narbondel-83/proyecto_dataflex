@@ -22,7 +22,7 @@ Class centrenadorDataDictionary is a DataDictionary
         Set Foreign_Field_Option DD_DEFAULT DD_DISPLAYONLY to True
 
     End_Procedure
-    
+    //para relación hard
     Procedure Attach_Main_File //procedimiento durante el guardado
         Forward Send Attach_Main_File //hago lo que haga mi padre
         

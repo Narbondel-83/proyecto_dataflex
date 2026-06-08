@@ -96,7 +96,7 @@ Object oZoomEntrenador is a cWebView
                     End_Procedure
                 End_Object 
                 
-                Object oSinEquipoBtn is a cWebButton //btn - sin equipo
+                Object oSinEquipoBtn is a cWebButton //btn - sin equipo (hard)
                     Set psCaption to "Dejar entrenador sin equipo"
                     Set piColumnSpan to 6
                     Set piColumnIndex to 0

@@ -20,8 +20,8 @@ Class cjugadorDataDictionary is a DataDictionary
 
         Set Add_Client_File to hijojugador.File_Number
         Set Add_Client_File to jugadorposicion.File_Number
-
-        Set ParentNullAllowed equipo.File_Number to True
+        //como es relación soft solo tengo que poner esto y borrar fk en MySQL
+        Set ParentNullAllowed equipo.File_Number to True //puedo no tener padre
 
         Set Foreign_Field_Option DD_KEYFIELD DD_NOPUT to True
         Set Foreign_Field_Option DD_KEYFIELD DD_FINDREQ to True
